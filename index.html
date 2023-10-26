@@ -40,7 +40,16 @@
                         </div>
                         <div>
                             <ul>
-                                <li></li>
+                                <li class="contact" v-for="(contact, index) in contacts">
+                                    <div>
+                                        <img class="user_image" :src="contact.avatar" alt="">
+                                    </div>
+                                    <div>
+                                        <div><strong>{{contact.name}}</strong></div>
+                                        <div>Lorem ipsum dolor sit.</div>
+                                    </div>
+                                    <div class="time-chat__contact">12:00</div>
+                                </li>
                             </ul>
                         </div>
                     </div>

@@ -101,6 +101,7 @@ main{
     border-radius:50% ;
     padding: 10px;
     aspect-ratio: 1;
+    margin-left: 6px;
 }
 
 
@@ -134,7 +135,7 @@ main{
 .bg-chat__main{
     border: 1px solid red;
     min-height: 100%;
-    background-image: url("mine.jpg");
+   
 }
 
 .chat-img{
@@ -155,6 +156,7 @@ main{
 
 .icon-smile__write, .micro-smile__chat{
     padding:0 10px ;
+    font-size: 20px;
 }
 
 .input__chat{
@@ -169,3 +171,22 @@ main{
     padding: 10px 5px;
     border-radius: 10px;
 }
+
+
+.contact{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 4px ;
+}
+
+.time-chat__contact{
+    font-size: 10px;
+    color: grey;
+    align-self: flex-start;
+    margin-right: 0;
+    padding:2px;
+}
+
+
+
