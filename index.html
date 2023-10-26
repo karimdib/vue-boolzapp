@@ -10,7 +10,71 @@
 </head>
 <body>
     <div id="app">
-        <h2>{{message}}</h2>
+        <header></header>
+        <main>
+            <div class="container">
+                <div class="content">
+                    <div class="side__content">
+                        <div class="head__side">
+                            <figure><img class="user_image" src="./img/avatar_1.jpg" alt=""></figure>
+                            <p class="name__side">Gianluca</p>
+                            <div class="icon__side"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                        </div>
+                        <div class="notes__side">
+                            <div class="icon__note">
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
+                            <div class="text__note">
+                                <span>Ricevi notifiche di nuovi messaggi</span>
+                                <div>Lorem, ipsum dolor.</div>
+                            </div>
+                            
+                        </div>
+                        <div class="input__side">
+                            <button class="button__input">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <div class="input__text">
+                                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                            </div>
+                        </div>
+                        <div>
+                            <ul>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="main__content">
+                        <div class="head__side">
+                            <figure><img class="user_image" src="./img/avatar_2.jpg" alt=""></figure>
+                            <p class="name__side">Fabio</p>
+                            <div class="icon__side">
+                                <i class="fa-solid fa-circle-notch"></i>
+                                <i class="fa-solid fa-message"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                                
+                            </div>
+                        </div>
+                        <!--so che è un background, non so il perche ma non me lo prende-->
+                        <div class="bg-chat__main"> 
+                            <img  class="chat-img" src="./img/mine.jpg" alt="">
+                        </div>
+                        <div class="chat-text__main">
+                            <div class="icon-smile__write">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                            <div class="input__chat">
+                                <input type="text" placeholder="Scrivi messaggio">
+                            </div>
+                            <div class="micro-smile__chat">
+                                <i class="fa-solid fa-microphone"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
     </div>
     <script src="./js/app.js"></script>
 </body>
