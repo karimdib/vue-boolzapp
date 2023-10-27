@@ -31,7 +31,6 @@ main{
 .container{
     max-width: 800px;
     margin: 0 auto;
-    border: 1px solid black;
     min-height: 700px;
     position: relative;
     top: -120px;
@@ -45,10 +44,6 @@ main{
 }
 
 
-.side__content, .main__content{
-    border: 1px solid black;
-    
-}
 
 
 .side__content{
@@ -79,6 +74,7 @@ main{
 
 .icon__side > i{
     margin-right: 15px;
+    color: #989798;
 }
 
 
@@ -117,7 +113,6 @@ main{
     align-items: center;
     padding: 10px;
     background-color: #fcf8fc;
-    border: 1px solid black;
 }
 
 .button__input{
@@ -132,11 +127,7 @@ main{
     width: 100%;
 }
 
-.bg-chat__main{
-    border: 1px solid red;
-    min-height: 100%;
-   
-}
+
 
 .chat-img{
     width: 100%;
@@ -188,5 +179,29 @@ main{
     padding:2px;
 }
 
+.color-grey{
+    color: grey;
+}
 
 
+.bg-chat__main {
+    padding: 40px;
+    background-image: url(../img/mine.jpg);
+    min-height: 80vh;
+}
+
+.bg-chat__main > *{
+    width: 80%;
+    padding: 15px 0;
+}
+
+.contact-profile{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right:20px ;
+}
+
+.contact-myprofile{
+    align-self: flex-end;
+    margin-left: 20px;
+}

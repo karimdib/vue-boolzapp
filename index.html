@@ -46,7 +46,7 @@
                                     </div>
                                     <div>
                                         <div><strong>{{contact.name}}</strong></div>
-                                        <div>Lorem ipsum dolor sit.</div>
+                                        <div class="color-grey">Lorem ipsum dolor sit.</div>
                                     </div>
                                     <div class="time-chat__contact">12:00</div>
                                 </li>
@@ -64,9 +64,10 @@
                                 
                             </div>
                         </div>
-                        <!--so che è un background, non so il perche ma non me lo prende-->
                         <div class="bg-chat__main"> 
-                            <img  class="chat-img" src="./img/mine.jpg" alt="">
+                            <div class="contact-profile" >{{contacts[1].messages[0].message}}</div>
+                            <div class="contact-myprofile">{{contacts[1].messages[1].message}}</div>
+                            <div class="contact-profile">{{contacts[1].messages[2].message}}</div>
                         </div>
                         <div class="chat-text__main">
                             <div class="icon-smile__write">
