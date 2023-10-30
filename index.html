@@ -40,7 +40,9 @@
                         </div>
                         <div>
                             <ul>
-                                <li class="contact" v-for="(contact, index) in contacts">
+                                <li class="contact" v-for="(contact, index) in contacts"
+                                 :class="{active : index === currentIndex }"
+                                 @click="changeChat(index)">
                                     <div>
                                         <img class="user_image" :src="contact.avatar" alt="">
                                     </div>
@@ -55,8 +57,8 @@
                     </div>
                     <div class="main__content">
                         <div class="head__side">
-                            <figure><img class="user_image" src="./img/avatar_2.jpg" alt=""></figure>
-                            <p class="name__side">Fabio</p>
+                            <figure><img class="user_image" :src="contacts[currentIndex].avatar" alt=""></figure>
+                            <p class="name__side">{{contacts[currentIndex].name}}</p>
                             <div class="icon__side">
                                 <i class="fa-solid fa-circle-notch"></i>
                                 <i class="fa-solid fa-message"></i>
@@ -64,17 +66,17 @@
                                 
                             </div>
                         </div>
-                        <div class="bg-chat__main"> 
-                            <div class="contact-profile" >{{contacts[1].messages[0].message}}</div>
-                            <div class="contact-myprofile">{{contacts[1].messages[1].message}}</div>
-                            <div class="contact-profile">{{contacts[1].messages[2].message}}</div>
+                        <div class="bg-chat__main" v-if="currentContact"> 
+                            <div class="contact-profile" v-for="message in currentContact.messages" :class="message.status">
+                                {{message.message}}
+                            </div>
                         </div>
                         <div class="chat-text__main">
                             <div class="icon-smile__write">
                                 <i class="fa-regular fa-face-smile"></i>
                             </div>
                             <div class="input__chat">
-                                <input type="text" placeholder="Scrivi messaggio">
+                                <input type="text" placeholder="Scrivi messaggio" v-model="inputText" @keyup.enter="sendMessage">
                             </div>
                             <div class="micro-smile__chat">
                                 <i class="fa-solid fa-microphone"></i>

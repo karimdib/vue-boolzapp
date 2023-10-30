@@ -3,6 +3,9 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        currentIndex: 1,
+        inputText: '',
+        currentContact:  null,
         contacts:[
           {
             name: 'Michele',
@@ -173,5 +176,29 @@ const { createApp } = Vue
           }
         ]
       }
+    },
+    methods:{
+      changeChat(index){
+        this.currentIndex = index
+        this.currentContact = this.contacts[index]
+      },
+      sendMessage(){
+        const newMessage = { 
+          message: this.inputText,
+          status: 'sent',
+        }
+        this.currentContact.messages.push(newMessage)
+        this.inputText = ''
+        setTimeout(() => {
+          const responseMessage = {
+            message: 'Ok',
+            status: 'received',
+          }
+          this.currentContact.messages.push(responseMessage)
+        }, 1000)
+      }
+    },
+    mounted() {
+      this.currentContact = this.contacts[0]
     }
   }).mount('#app')
