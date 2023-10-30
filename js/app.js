@@ -6,6 +6,8 @@ const { createApp } = Vue
         currentIndex: 1,
         inputText: '',
         currentContact:  null,
+        searchText: '',
+        searchResults: [],
         contacts:[
           {
             name: 'Michele',
@@ -196,9 +198,15 @@ const { createApp } = Vue
           }
           this.currentContact.messages.push(responseMessage)
         }, 1000)
+      },
+      inputFilter(){
+        this.searchResults  = this.contacts.filter((contact) => {
+          return contact.name.includes(this.searchText)
+        })
       }
     },
     mounted() {
       this.currentContact = this.contacts[0]
+      this.searchResults = this.contacts
     }
   }).mount('#app')
